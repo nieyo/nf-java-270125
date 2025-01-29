@@ -5,14 +5,11 @@ public class ArrayAndForLoop {
         int[] numbers = {1,2,3,4,5,6,7,8,9,10};
         int[] numbers2 = {20,19,18,17,16,15,14,13,12,11};
         int[] numbersSum = new int[10];
-
-        for(int number : numbers) {
-            System.out.println(number);
-        }
+        arrayOutput(numbers);
         System.out.println("-----");
 
         int sum = 0;
-        int highestNumber = 0;
+        int highestNumber = numbers[0];
 
         // find shorter array to prevent ArrayIndexOutOfBoundsException
         // numbers.length < numbers2.length ? int index = numbers.length : int index = numbers2.length
@@ -32,10 +29,8 @@ public class ArrayAndForLoop {
         System.out.println("sum: " + sum);
         System.out.println("highest number: " + highestNumber);
         System.out.println("-----");
+        arrayOutput(numbersSum);
 
-        for(int number : numbersSum) {
-            System.out.println(number);
-        }
         System.out.println("-----");
 
         // Bonus
@@ -43,12 +38,25 @@ public class ArrayAndForLoop {
         System.out.println("Bitte geben Sie ein Wort ein:");
         String input = scanner.nextLine();
         scanner.close();
-        System.out.println(input);
 
-        char[] zeichenArray = input.toCharArray();
+        for (int i = 0; i < input.length(); i++) {
+            System.out.println(input.charAt(i));
+        }
 
-        for (char zeichen : zeichenArray) {
-            System.out.println(zeichen);
+        //char[] zeichenArray = input.toCharArray();
+        //arrayOutput(zeichenArray);
+
+
+    }
+
+    public  static void arrayOutput(int[] array) {
+        for (int value : array) {
+            System.out.println(value);
+        }
+    }
+    public  static void arrayOutput(char[] array) {
+        for (char value : array) {
+            System.out.println(value);
         }
     }
 }
