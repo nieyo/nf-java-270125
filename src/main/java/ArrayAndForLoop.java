@@ -12,7 +12,7 @@ public class ArrayAndForLoop {
         int sum = 0;
         int highestNumber = 0;
 
-        // find shorter array
+        // find shorter array to prevent ArrayIndexOutOfBoundsException
         // numbers.length < numbers2.length ? int index = numbers.length : int index = numbers2.length
 
         for (int i = 0; i < numbers.length; i++) {
