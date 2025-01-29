@@ -48,8 +48,4 @@ class TestingTest {
         boolean actual = Testing.isPositive(a);
         assertEquals(expected, actual);
     }
-
-
-
-
 }

@@ -54,6 +54,4 @@ public class ArrayAndForLoop {
             System.out.println(value);
         }
     }
-
-    }
 }
