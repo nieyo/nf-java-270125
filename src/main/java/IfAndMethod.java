@@ -1,4 +1,4 @@
-public class IfMethod {
+public class IfAndMethod {
     public static void main(String[] args){
         int aInt = -2;
         int bInt = 5;
