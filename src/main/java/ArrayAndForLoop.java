@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ArrayAndForLoop {
     public static void main(String[] args) {
         int[] numbers = {1,2,3,4,5,6,7,8,9,10};
@@ -33,6 +35,20 @@ public class ArrayAndForLoop {
 
         for(int number : numbersSum) {
             System.out.println(number);
+        }
+        System.out.println("-----");
+
+        // Bonus
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bitte geben Sie ein Wort ein:");
+        String input = scanner.nextLine();
+        scanner.close();
+        System.out.println(input);
+
+        char[] zeichenArray = input.toCharArray();
+
+        for (char zeichen : zeichenArray) {
+            System.out.println(zeichen);
         }
     }
 }
