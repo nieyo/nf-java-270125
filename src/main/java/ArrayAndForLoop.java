@@ -54,9 +54,6 @@ public class ArrayAndForLoop {
             System.out.println(value);
         }
     }
-    public  static void arrayOutput(char[] array) {
-        for (char value : array) {
-            System.out.println(value);
-        }
+
     }
 }
