@@ -2,12 +2,12 @@ public class CharacterPlayer {
     static int x = 0;
     static int y = 0;
 
-    public static void setX() {
-        x = 0;
+    public static void setX(int newX) {
+        x = newX;
     }
 
-    public static void setY() {
-        y = 0;
+    public static void setY(int newY) {
+        y = newY;
     }
 
     public static int getX() {

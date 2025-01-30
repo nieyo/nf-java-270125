@@ -8,8 +8,8 @@ public class PlayerCharacterTest {
 
     @BeforeEach
     void initial_setCoordinatesToZero() {
-        CharacterPlayer.setX();
-        CharacterPlayer.setY();
+        CharacterPlayer.setX(0);
+        CharacterPlayer.setY(0);
         // CharacterPlayer.x = 0;
     }
 
