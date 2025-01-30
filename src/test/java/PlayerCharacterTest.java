@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerCharacterTest {
@@ -13,7 +14,8 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectX0_whenPlayerInCenter() {
+    // methodName_givenCondition_expectedBehavior
+    void getX_whenPlayerInCenter_returnsZero() {
         // GIVEN
         int expected = 0;
         // WHEN
@@ -23,17 +25,17 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectY0_whenPlayerInCenter() {
+    void getY_whenPlayerInCenter_returnsZero() {
         // GIVEN
-        // WHEN
         int expected = 0;
+        // WHEN
         int actual = CharacterPlayer.getY();
         // THEN
         assertEquals(expected, actual);
     }
 
     @Test
-    void expectY1_whenPlayerMovesUp() {
+    void move_givenUpInput_increasesYByOne() {
         // GIVEN
         String input = "W";
         int expected = 1;
@@ -45,7 +47,7 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectX1_whenPlayerMovesRight() {
+    void move_givenRightInput_increasesXByOne() {
         // GIVEN
         String input = "D";
         int expected = 1;
@@ -57,7 +59,7 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectYMinus1_whenPlayerMovesDown() {
+    void move_givenDownInput_decreasesYByOne() {
         // GIVEN
         String input = "S";
         int expected = -1;
@@ -69,7 +71,7 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectXMinus1_whenPlayerMovesLeft() {
+    void move_givenRightInput_decreasesXByOne() {
         // GIVEN
         String input = "A";
         int expected = -1;
@@ -81,7 +83,7 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void expectZeroXY_whenInputWrong() {
+    void move_givenWrongInput_returnsZero() {
         // GIVEN
         String input = "E";
         int expectedX = 0;
@@ -91,7 +93,9 @@ public class PlayerCharacterTest {
         // THEN
         int actualX = CharacterPlayer.getX();
         int actualY = CharacterPlayer.getY();
-        assertEquals(expectedX, actualX);
-        assertEquals(expectedY, actualY);
+        assertAll(
+            () -> assertEquals(expectedX, actualX),
+            () -> assertEquals(expectedY, actualY)
+        );
     }
 }
