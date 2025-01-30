@@ -19,6 +19,15 @@ public class CharacterPlayer {
     }
 
     public static void move(String input) {
+
+        switch (input) {
+            case "W" -> y++;
+            case "S" -> y--;
+            case "D" -> x++;
+            case "A" -> x--;
+        }
+
+        /*
         if(input.equals("W")) {
             y++;
         }
@@ -31,6 +40,7 @@ public class CharacterPlayer {
         if(input.equals("D")) {
             x++;
         }
+         */
     }
 
 
