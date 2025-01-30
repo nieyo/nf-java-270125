@@ -25,10 +25,12 @@ public class CharacterPlayer {
         if(input.equals("S")) {
             y--;
         }
+        if(input.equals("A")) {
+            x--;
+        }
         if(input.equals("D")) {
             x++;
         }
-
     }
 
 

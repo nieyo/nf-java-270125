@@ -67,4 +67,16 @@ public class PlayerCharacterTest {
         int actual = CharacterPlayer.getY();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void expectXMinus1_whenPlayerMovesLeft() {
+        // GIVEN
+        String input = "A";
+        int expected = -1;
+        // WHEN
+        CharacterPlayer.move(input);
+        // THEN
+        int actual = CharacterPlayer.getX();
+        assertEquals(expected, actual);
+    }
 }
