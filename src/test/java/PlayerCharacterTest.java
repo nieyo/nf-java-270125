@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PlayerCharacterTest {
 
     @BeforeEach
-    void setValues() {
+    void initial_setCoordinatesToZero() {
         CharacterPlayer.setX();
         CharacterPlayer.setY();
         // CharacterPlayer.x = 0;
@@ -96,6 +96,23 @@ public class PlayerCharacterTest {
         assertAll(
             () -> assertEquals(expectedX, actualX),
             () -> assertEquals(expectedY, actualY)
+        );
+    }
+
+    @Test
+    void move_givenMultipleInputs_updatesCoordinatesCorrectly() {
+        // GIVEN
+        int expectedX = -2;
+        int expectedY = 1;
+        String[] movements = {"W", "A", "D", "A", "S", "A", "W"};
+        // WHEN
+        for (String movement : movements) {
+            CharacterPlayer.move(movement);
+        }
+        // THEN
+        assertAll(
+            () -> assertEquals(expectedX, CharacterPlayer.getX()), // Zurück zum Ursprung
+            () -> assertEquals(expectedY, CharacterPlayer.getY())
         );
     }
 }
