@@ -1,21 +1,31 @@
 public class CharacterPlayer {
+    static int x = 0;
+    static int y = 0;
 
-    public static void main(String[] args) {
+    public static void setX() {
+        x = 0;
+    }
 
+    public static void setY() {
+        y = 0;
     }
 
     public static int getX() {
-        return 0;
+        return x;
     }
 
     public static int getY() {
-        return 0;
+        return y;
     }
 
-    public static int move(String input) {
+    public static void move(String input) {
         if(input.equals("W")) {
-            return 1;
+            y++;
         }
-        return 0;
+        if(input.equals("D")) {
+            x++;
+        }
     }
+
+
 }
