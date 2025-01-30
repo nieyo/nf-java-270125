@@ -79,4 +79,19 @@ public class PlayerCharacterTest {
         int actual = CharacterPlayer.getX();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void expectZeroXY_whenInputWrong() {
+        // GIVEN
+        String input = "E";
+        int expectedX = 0;
+        int expectedY = 0;
+        // WHEN
+        CharacterPlayer.move(input);
+        // THEN
+        int actualX = CharacterPlayer.getX();
+        int actualY = CharacterPlayer.getY();
+        assertEquals(expectedX, actualX);
+        assertEquals(expectedY, actualY);
+    }
 }
