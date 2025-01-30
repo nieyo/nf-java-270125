@@ -22,4 +22,15 @@ public class PlayerCharacterTest {
         // THEN
         assertEquals(expected, actual);
     }
+
+    @Test
+    void expectYPlus1_whenPlayerMoves() {
+        // GIVEN
+        String input = "W";
+        // WHEN
+        int expected = 1;
+        int actual = CharacterPlayer.move(input);
+        // THEN
+        assertEquals(expected, actual);
+    }
 }
