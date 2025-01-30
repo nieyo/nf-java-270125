@@ -22,9 +22,13 @@ public class CharacterPlayer {
         if(input.equals("W")) {
             y++;
         }
+        if(input.equals("S")) {
+            y--;
+        }
         if(input.equals("D")) {
             x++;
         }
+
     }
 
 
