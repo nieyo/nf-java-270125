@@ -1,4 +1,5 @@
-package bonus;
+package org.example.bonus;
+
 
 import org.junit.jupiter.api.Test;
 

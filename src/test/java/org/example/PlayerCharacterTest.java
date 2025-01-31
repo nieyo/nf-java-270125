@@ -1,3 +1,6 @@
+package org.example;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,8 +11,8 @@ public class PlayerCharacterTest {
 
     @BeforeEach
     void initial_setCoordinatesToZero() {
-        CharacterPlayer.setX(0);
-        CharacterPlayer.setY(0);
+        PlayerCharacter.setX(0);
+        PlayerCharacter.setY(0);
         // CharacterPlayer.x = 0;
     }
 
@@ -19,7 +22,7 @@ public class PlayerCharacterTest {
         // GIVEN
         int expected = 0;
         // WHEN
-        int actual = CharacterPlayer.getX();
+        int actual = PlayerCharacter.getX();
         // THEN
         assertEquals(expected, actual);
     }
@@ -29,7 +32,7 @@ public class PlayerCharacterTest {
         // GIVEN
         int expected = 0;
         // WHEN
-        int actual = CharacterPlayer.getY();
+        int actual = PlayerCharacter.getY();
         // THEN
         assertEquals(expected, actual);
     }
@@ -40,9 +43,9 @@ public class PlayerCharacterTest {
         String input = "W";
         int expected = 1;
         // WHEN
-        CharacterPlayer.move(input);
+        PlayerCharacter.move(input);
         // THEN
-        int actual = CharacterPlayer.getY();
+        int actual = PlayerCharacter.getY();
         assertEquals(expected, actual);
     }
 
@@ -52,9 +55,9 @@ public class PlayerCharacterTest {
         String input = "D";
         int expected = 1;
         // WHEN
-        CharacterPlayer.move(input);
+        PlayerCharacter.move(input);
         // THEN
-        int actual = CharacterPlayer.getX();
+        int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
 
@@ -64,9 +67,9 @@ public class PlayerCharacterTest {
         String input = "S";
         int expected = -1;
         // WHEN
-        CharacterPlayer.move(input);
+        PlayerCharacter.move(input);
         // THEN
-        int actual = CharacterPlayer.getY();
+        int actual = PlayerCharacter.getY();
         assertEquals(expected, actual);
     }
 
@@ -76,9 +79,9 @@ public class PlayerCharacterTest {
         String input = "A";
         int expected = -1;
         // WHEN
-        CharacterPlayer.move(input);
+        PlayerCharacter.move(input);
         // THEN
-        int actual = CharacterPlayer.getX();
+        int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
 
@@ -89,10 +92,10 @@ public class PlayerCharacterTest {
         int expectedX = 0;
         int expectedY = 0;
         // WHEN
-        CharacterPlayer.move(input);
+        PlayerCharacter.move(input);
         // THEN
-        int actualX = CharacterPlayer.getX();
-        int actualY = CharacterPlayer.getY();
+        int actualX = PlayerCharacter.getX();
+        int actualY = PlayerCharacter.getY();
         assertAll(
             () -> assertEquals(expectedX, actualX),
             () -> assertEquals(expectedY, actualY)
@@ -107,12 +110,12 @@ public class PlayerCharacterTest {
         String[] movements = {"W", "A", "D", "A", "S", "A", "W"};
         // WHEN
         for (String movement : movements) {
-            CharacterPlayer.move(movement);
+            PlayerCharacter.move(movement);
         }
         // THEN
         assertAll(
-            () -> assertEquals(expectedX, CharacterPlayer.getX()), // Zurück zum Ursprung
-            () -> assertEquals(expectedY, CharacterPlayer.getY())
+            () -> Assertions.assertEquals(expectedX, PlayerCharacter.getX()), // Zurück zum Ursprung
+            () -> Assertions.assertEquals(expectedY, PlayerCharacter.getY())
         );
     }
 }

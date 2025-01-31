@@ -1,3 +1,5 @@
+package org.example;
+
 public class IfAndMethod {
     public static void main(String[] args){
         int aInt = -2;
