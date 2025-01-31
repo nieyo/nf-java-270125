@@ -1,6 +1,6 @@
 name: Java CI with Maven
 
-on: # wann lößt die action aus?
+on: # wann löst die action aus?
   push:
     branches: [ "master" ]
   pull_request:
