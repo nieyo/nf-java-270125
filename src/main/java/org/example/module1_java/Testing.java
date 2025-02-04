@@ -1,4 +1,4 @@
-package org.example;
+package org.example.module1_java;
 
 public class Testing {
     public static void main(String[] args) {

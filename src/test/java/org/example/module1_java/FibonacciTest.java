@@ -1,4 +1,4 @@
-package org.example.bonus;
+package org.example.module1_java;
 
 
 import org.junit.jupiter.api.Test;

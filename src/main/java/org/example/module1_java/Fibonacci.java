@@ -1,4 +1,4 @@
-package org.example.bonus;
+package org.example.module1_java;
 
 public class Fibonacci {
     public static void main(String[] args) {

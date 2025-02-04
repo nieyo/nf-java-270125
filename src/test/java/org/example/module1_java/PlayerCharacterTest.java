@@ -1,4 +1,4 @@
-package org.example;
+package org.example.module1_java;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
