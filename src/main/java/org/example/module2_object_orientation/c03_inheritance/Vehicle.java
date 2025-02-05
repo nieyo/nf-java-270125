@@ -8,7 +8,6 @@ public class Vehicle {
     protected String yearOfManufacture;
 
     public void printInformation(){
-        System.out.print("---\n");
         System.out.printf("This Vehicle is manufactured by %s in %s. The name of the model is %s.\n", manufacturer, yearOfManufacture, model);
     }
 

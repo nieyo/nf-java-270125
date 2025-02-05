@@ -7,8 +7,7 @@ public class Car extends Vehicle {
 
     @Override
     public void printInformation(){
-        System.out.print("---\n");
-        System.out.printf("This Car is manufactured by %s in %s. The name of the model is %s.", manufacturer, yearOfManufacture, model);
+        System.out.printf("This Car is manufactured by %s in %s. The name of the model is %s. ", manufacturer, yearOfManufacture, model);
         System.out.printf("It has %d doors.\n", numberOfDoors);
     }
 

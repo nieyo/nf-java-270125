@@ -7,6 +7,7 @@ public class Main_Challenge03 {
         Motorcycle m1 = new Motorcycle("Harley-Davidson", "Road Glide", "2024", "Touring");
 
         v1.printInformation();
+        System.out.println(v1.toString());
         c1.printInformation();
         System.out.println(m1.getType());
     }
