@@ -8,7 +8,6 @@ public class School {
     private ArrayList<Student> students;
 
 
-
     public School() {
         students = new ArrayList<>();
     }
@@ -32,23 +31,23 @@ public class School {
 
     public Student findStudentByID(String id) {
         for (Student student : students) {
-            if (student.getStudentID().equals(id)){
+            if (student.getStudentID().equals(id)) {
                 return student;
             }
         }
         return null;
     }
 
-    public void deleteStudent(Student student){
+    public void deleteStudent(Student student) {
         students.remove(student);
     }
 
     public void printCoursesOfStudentByID(String id) {
         Student student = findStudentByID(id);
         System.out.println(student.getFirstName() + " " + student.getLastName() + "'s Courses:");
-        ArrayList<Course> courses = student.getCourses();
+        ArrayList<Course> courses = student.getCourses(); // return student.getCourses(), if ArrayList of courses is needed as return value
         for (Course course : courses) {
-            System.out.println(course.getCourseName() +" with " + course.getInstructor());
+            System.out.println(course.getCourseName() + " with " + course.getInstructor());
         }
     }
 }

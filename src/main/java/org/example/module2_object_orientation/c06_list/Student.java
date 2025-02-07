@@ -8,29 +8,20 @@ public class Student {
     private String studentID;
     private ArrayList<Course> courses;
 
-    public Student(String firstName, String lastName, String studentID) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.studentID = studentID;
-        this.courses = new ArrayList<>();
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", studentID='" + studentID + '\'' +
-                '}';
+    public void addStudentToCourse(Course course){
+        courses.add(course);
+        // System.out.println(firstName + " " + lastName + " was added to the course: " + course.getCourseName());
     }
 
     public String getStudentID() {
         return studentID;
     }
 
-    public void addStudentToCourse(Course course){
-        courses.add(course);
-        // System.out.println(firstName + " " + lastName + " was added to the course: " + course.getCourseName());
+    public Student(String firstName, String lastName, String studentID) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentID = studentID;
+        this.courses = new ArrayList<>();
     }
 
     public ArrayList<Course> getCourses() {
@@ -43,5 +34,14 @@ public class Student {
 
     public String getLastName() {
         return lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studentID='" + studentID + '\'' +
+                '}';
     }
 }
