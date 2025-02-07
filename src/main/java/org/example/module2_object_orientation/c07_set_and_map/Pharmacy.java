@@ -34,7 +34,7 @@ public class Pharmacy {
         for (Map.Entry<String, Medication> entry : medications.entrySet()) {
             String key = entry.getKey();
             Medication value = entry.getValue();
-            System.out.println("Key: " + key + ", Value: " + value);
+            System.out.println(value.getName() + " " + value.getPrice() + " " + value.isAvailable());
         }
     }
 

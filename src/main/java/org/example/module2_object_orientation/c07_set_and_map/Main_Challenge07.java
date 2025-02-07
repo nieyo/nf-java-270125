@@ -63,6 +63,8 @@ public class Main_Challenge07 {
         System.out.println(ph1.getCount());
 
         ph1.printMedications();
+        // or with toString()
+        // System.out.println(ph1.toString());
 
 
 
