@@ -8,6 +8,11 @@ public class ProductRepo {
 
     // add methods to add, remove, and get products (single product and all products)
 
+
+    public ProductRepo() {
+        repository = new ArrayList<>();
+    }
+
     public ProductRepo(ArrayList<Product> repository) {
         this.repository = repository;
     }
@@ -37,5 +42,9 @@ public class ProductRepo {
         return "ProductRepo{" +
                 "repository=" + repository +
                 '}';
+    }
+
+    public void add(Product product) {
+        repository.add(product);
     }
 }
