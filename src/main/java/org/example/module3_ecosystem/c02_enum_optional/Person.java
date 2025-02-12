@@ -8,7 +8,7 @@ public record Person(
 
     @Override
     public String toString() {
-        return "Perso{" +
+        return "Person{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", favoriteDay=" + favoriteDay +
