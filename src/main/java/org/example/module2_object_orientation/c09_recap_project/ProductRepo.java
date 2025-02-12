@@ -4,47 +4,59 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class ProductRepo {
-    private ArrayList<Product> repository;
+    private ArrayList<Product> products;
 
-    // add methods to add, remove, and get products (single product and all products)
-
+    // Constructor
 
     public ProductRepo() {
-        repository = new ArrayList<>();
+        products = new ArrayList<>();
     }
 
-    public ProductRepo(ArrayList<Product> repository) {
-        this.repository = repository;
+    // Getter & Setter
+
+    public ArrayList<Product> getProducts() {
+        return products;
     }
 
-    public ArrayList<Product> getRepository() {
-        return repository;
-    }
-
-    public void setRepository(ArrayList<Product> repository) {
-        this.repository = repository;
-    }
+    // equals & hashCode
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         ProductRepo that = (ProductRepo) o;
-        return Objects.equals(repository, that.repository);
+        return Objects.equals(products, that.products);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(repository);
+        return Objects.hashCode(products);
     }
+
+    // toString
 
     @Override
     public String toString() {
         return "ProductRepo{" +
-                "repository=" + repository +
+                "repository=" + products +
                 '}';
     }
 
+    // custom methods
+
     public void add(Product product) {
-        repository.add(product);
+        products.add(product);
+    }
+
+    public void add(long id) {
+        products.remove(get(id));
+    }
+
+    public Product get(long id) {
+        for (Product product : products) {
+            if (product.id() == id){
+                return product;
+            }
+        }
+        return null;
     }
 }

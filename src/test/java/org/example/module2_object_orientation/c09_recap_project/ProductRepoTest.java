@@ -1,8 +1,7 @@
 package org.example.module2_object_orientation.c09_recap_project;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,14 +9,30 @@ class ProductRepoTest {
 
     // GIVEN > WHEN > THEN
 
+    private ProductRepo repo;
+    private final Product product1 = new Product(1, "TestProduct");
+    private final Product product2 = new Product(2, "AnotherProduct");
+
+    @BeforeEach
+    void setUp() {
+        repo = new ProductRepo();
+        repo.add(product1);
+        repo.add(product2);
+    }
+
     @Test
-    void add_addProduct_RepoContainsProduct() {
-        ProductRepo repo = new ProductRepo();
-        Product product = new Product(1, "name", "1.4", "dev");
+    void add_WhenProductIsAdded_ThenRepositoryContainsIt() {
+        Product product = new Product(1, "name");
 
         repo.add(product);
 
-        assertTrue(repo.getRepository().contains(product));
-        assertEquals(1, repo.getRepository().size());
+        assertTrue(repo.getProducts().contains(product));
     }
+
+    @Test
+    void get_ById_ShouldReturnCorrectProduct() {
+        Product result = repo.get(2L);
+        assertEquals(product2, result);
+    }
+
 }
