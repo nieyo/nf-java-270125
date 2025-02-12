@@ -1,4 +1,4 @@
-package org.example.module3.c01_ai;
+package org.example.module3_ecosystem.c01_ai;
 
 /**
  * This class demonstrates the implementation of the Bubble Sort algorithm.

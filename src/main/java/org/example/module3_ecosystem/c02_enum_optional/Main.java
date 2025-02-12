@@ -1,4 +1,4 @@
-package org.example.module3.c02_enum_optional;
+package org.example.module3_ecosystem.c02_enum_optional;
 
 import java.util.Optional;
 

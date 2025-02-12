@@ -1,4 +1,4 @@
-package org.example.module3.c01_ai;
+package org.example.module3_ecosystem.c01_ai;
 
 import java.util.ArrayList;
 import java.util.List;
