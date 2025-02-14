@@ -1,7 +1,5 @@
 package org.example.module3_ecosystem.c03_streams;
 
-import java.util.List;
-
 public class Student {
     private int id;
     private String name;
