@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
+        // STUDENTS
         Student s1 = new Student("1", "Max", "address 1", 3.4f);
         Student s2 = new Student("2", "Maxi", "address 2", 2.8f);
 
@@ -23,6 +24,7 @@ public class Main {
                 .address("address 4")
                 .build();
 
+        // TEACHER
         Teacher t1 = new Teacher("1", "Alice", "english");
         Teacher t2 = Teacher.builder()
                 .id("2")
@@ -31,7 +33,7 @@ public class Main {
                 .build();
         Teacher t3 = t2.withId("3").withName("Carol");
 
-
+        // COURSES
         Course c1 = new Course("1", "course 1", t1, Arrays.asList(s1, s2, s3, s4));
         Course c2 = Course.builder()
                 .students(new ArrayList<>(Arrays.asList(s1, s2)))
@@ -46,7 +48,7 @@ public class Main {
                 .name("course 3")
                 .build();
 
-
+        // OUTPUT
         System.out.println(c1);
         System.out.println(c2);
         System.out.println(c3);
