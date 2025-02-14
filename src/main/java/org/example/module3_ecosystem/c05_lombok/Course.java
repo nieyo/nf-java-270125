@@ -1,9 +1,6 @@
 package org.example.module3_ecosystem.c05_lombok;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,6 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Course {
+    @NonNull
     String id;
     String name;
     Teacher teacher;
